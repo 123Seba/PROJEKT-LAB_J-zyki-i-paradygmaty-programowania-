@@ -1,9 +1,8 @@
-osoba(jan, 22, pi³ka no¿na).
-osoba(ania, 30, czytanie).
-osoba(tomasz, 30, filmy).
-osoba(marek, 42, koszykówka).
+zatrudnienie(jan, bezimienny, zelmer, duza_firma, 2000).
+zatrudnienie(krzysztof, kowalski, abc_inc, srednia_firma, 2800).
+zatrudnienie(maria, kowalczyk, xyz_corp, mala_firma, 3000).
+zatrudnienie(tomasz, kaczmarek, quick_services, duza_firma, 2200).
+zatrudnienie(ewa, nowak, stellar_solutions, mala_firma, 2700).
+zatrudnienie(piotr, lis, global_tech, srednia_firma, 2600).
 
-% Regu³a porównuj¹ca wiek
-starszy(X, Y) :- osoba(X, WiekX, _), osoba(Y, WiekY, _), WiekX > WiekY.
-m³odszy(X, Y) :- osoba(X, WiekX, _), osoba(Y, WiekY, _), WiekX < WiekY.
-tenSamWiek(X, Y) :- osoba(X, WiekX, _), osoba(Y, WiekY, _), WiekX =:= WiekY, X\=Y.
+zadowolony_z_pracy(X) :- zatrudnienie(X, _, _, mala_firma, Z), Z > 2500.
